@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="218.0" prefWidth="265.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PrincipalController">
+    <children>
+        <Button fx:id="button" disable="true" layoutX="180.0" layoutY="97.0" onAction="#handleButtonAction" text="Converter" />
+        <Label fx:id="label" layoutX="28.0" layoutY="123.0" minHeight="16" minWidth="69" prefHeight="57.0" prefWidth="120.0" />
+      <RadioButton fx:id="celsius" layoutX="30.0" layoutY="51.0" mnemonicParsing="false" onAction="#rdbtnCel" text="Celsius">
+         <toggleGroup>
+            <ToggleGroup fx:id="temperatura" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="fah" layoutX="30.0" layoutY="74.0" mnemonicParsing="false" onAction="#rdbtnFah" text="Fahrenheit" toggleGroup="$temperatura" />
+      <TextField fx:id="txtfld" layoutX="30.0" layoutY="97.0" prefHeight="25.0" prefWidth="131.0">
+         <tooltip>
+            <Tooltip fx:id="ttip" text="Insira a temperatura a ser convertida" />
+         </tooltip></TextField>
+      <Text layoutX="47.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONVERSOR DE TEMPERATURA" />
+      <Button fx:id="btnLimp" disable="true" layoutX="188.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnLimpAction" text="Limpar" />
+      <Button fx:id="btnFechar" layoutX="189.0" layoutY="157.0" mnemonicParsing="false" onAction="#btnFecharAction" text="Fechar" />
+      <Text fx:id="txt1" fill="#9a9a9a" layoutX="91.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="para Fahrenheit" />
+      <Text fx:id="txt2" fill="#9a9a9a" layoutX="112.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="para Celsius" />
+    </children>
+</AnchorPane>
